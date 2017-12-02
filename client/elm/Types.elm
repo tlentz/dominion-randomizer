@@ -3,11 +3,19 @@ module Types
         ( Msg(DoNothing)
         , Model
         , Card
-        , DominionSet(Common)
+        , DominionSetModel
+        , DominionSet
+            ( Common
+            , BaseSet
+            , BaseSet2
+            )
         , CardType
             ( Treasure
             , Victory
             , Curse
+            , Action
+            , Attack
+            , Reaction
             )
         , initialModel
         )
@@ -19,12 +27,14 @@ type Msg
 
 type alias Model =
     { cards : List Card
+    , sets : List DominionSetModel
     }
 
 
 initialModel : Model
 initialModel =
     { cards = []
+    , sets = []
     }
 
 
@@ -33,12 +43,21 @@ type alias Card =
     , set : DominionSet
     , imgSrc : String
     , cardType : List CardType
+    , cost : Int
+    }
+
+
+type alias DominionSetModel =
+    { name : String
+    , set : DominionSet
+    , cards : List Card
     }
 
 
 type DominionSet
     = Common
     | BaseSet
+    | BaseSet2
     | Intrigue
     | Seaside
     | Prosperity
@@ -53,3 +72,6 @@ type CardType
     = Treasure
     | Victory
     | Curse
+    | Action
+    | Attack
+    | Reaction

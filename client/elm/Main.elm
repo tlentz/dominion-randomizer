@@ -2,8 +2,8 @@ module Main exposing (..)
 
 import Html exposing (Html, div, h1, h2, h3, span, text, p, i, hr, img)
 import Html.Attributes exposing (class, id, style, src)
-import Types exposing (Msg(..), Model, initialModel, Card)
-import Helper exposing (getCards)
+import Types exposing (Msg(..), Model, initialModel, Card, DominionSetModel)
+import Helper exposing (getSets)
 
 
 main : Program Never Model Msg
@@ -18,7 +18,7 @@ main =
 
 init : ( Model, Cmd Msg )
 init =
-    ( getCards initialModel, Cmd.none )
+    ( getSets initialModel, Cmd.none )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -46,23 +46,39 @@ view model =
     div
         [ class "main-wrapper container"
         ]
-        [ div [ class "dominion-logo-wrapper" ]
-            [ img
-                [ src
-                    "/dominion-randomizer/assets/images/dominion_logo_trans.png"
+    <|
+        List.append
+            [ div [ class "dominion-logo-wrapper" ]
+                [ img
+                    [ src
+                        "/dominion-randomizer/assets/images/dominion_logo_trans.png"
+                    ]
+                    []
+                , span [] [ text "Randomizer" ]
                 ]
-                []
-            , span [] [ text "Randomizer" ]
+            , hr [] []
             ]
-        , hr [] []
-        , showCards model
+        <|
+            showSets model
+
+
+showSets : Model -> List (Html Msg)
+showSets model =
+    List.map getSet model.sets
+
+
+getSet : DominionSetModel -> Html Msg
+getSet set =
+    div [ class "dominion-set-wrapper" ]
+        [ h2 [] [ text set.name ]
+        , showCards set.cards
         ]
 
 
-showCards : Model -> Html Msg
-showCards model =
+showCards : List Card -> Html Msg
+showCards cards =
     div [ class "cards-wrapper" ] <|
-        List.map getCard model.cards
+        List.map getCard cards
 
 
 getCard : Card -> Html Msg

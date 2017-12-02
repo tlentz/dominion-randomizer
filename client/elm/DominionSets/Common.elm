@@ -1,11 +1,12 @@
 module DominionSets.Common
     exposing
-        ( commonCards
+        ( commonSet
         )
 
 import Types
     exposing
         ( Card
+        , DominionSetModel
         , DominionSet(Common)
         , CardType
             ( Treasure
@@ -15,16 +16,20 @@ import Types
         )
 
 
-commonCards : List Card
-commonCards =
-    [ copper
-    , silver
-    , gold
-    , estate
-    , duchy
-    , province
-    , curse
-    ]
+commonSet : DominionSetModel
+commonSet =
+    { name = "Common"
+    , set = Common
+    , cards =
+        [ copper
+        , silver
+        , gold
+        , estate
+        , duchy
+        , province
+        , curse
+        ]
+    }
 
 
 copper : Card
@@ -33,6 +38,7 @@ copper =
     , set = Common
     , imgSrc = "common_copper"
     , cardType = [ Treasure ]
+    , cost = 0
     }
 
 
@@ -42,6 +48,7 @@ silver =
     , set = Common
     , imgSrc = "common_silver"
     , cardType = [ Treasure ]
+    , cost = 3
     }
 
 
@@ -51,6 +58,7 @@ gold =
     , set = Common
     , imgSrc = "common_gold"
     , cardType = [ Treasure ]
+    , cost = 6
     }
 
 
@@ -60,6 +68,7 @@ estate =
     , set = Common
     , imgSrc = "common_estate"
     , cardType = [ Victory ]
+    , cost = 2
     }
 
 
@@ -69,6 +78,7 @@ duchy =
     , set = Common
     , imgSrc = "common_duchy"
     , cardType = [ Victory ]
+    , cost = 5
     }
 
 
@@ -78,6 +88,7 @@ province =
     , set = Common
     , imgSrc = "common_province"
     , cardType = [ Victory ]
+    , cost = 8
     }
 
 
@@ -87,4 +98,5 @@ curse =
     , set = Common
     , imgSrc = "common_curse"
     , cardType = [ Victory ]
+    , cost = 0
     }

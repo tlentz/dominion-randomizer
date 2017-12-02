@@ -1,11 +1,17 @@
-module Helper exposing (getCards)
+module Helper exposing (getSets)
 
-import DominionSets.Common exposing (commonCards)
+import DominionSets.Common exposing (commonSet)
+import DominionSets.BaseSet exposing (baseSet)
+import DominionSets.BaseSet2 exposing (baseSet2)
 import Types exposing (Model)
 
 
-getCards : Model -> Model
-getCards model =
+getSets : Model -> Model
+getSets model =
     { model
-        | cards = commonCards
+        | sets =
+            [ baseSet
+            , baseSet2
+            , commonSet
+            ]
     }
