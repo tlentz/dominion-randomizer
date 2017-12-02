@@ -64,7 +64,7 @@ module.exports = {
             test: /\.sc?ss$/,
             use: ['style-loader', 'css-loader', 'sass-loader']
         }, {
-           test: /\.(html|ttf|eot|svg|png|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+           test: /\.(html|ttf|eot|svg|png|jpg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
            use: 'file-loader',
         }, {
            test: /\.elm$/,

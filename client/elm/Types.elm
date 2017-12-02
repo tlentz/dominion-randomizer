@@ -1,4 +1,16 @@
-module Types exposing (..)
+module Types
+    exposing
+        ( Msg(DoNothing)
+        , Model
+        , Card
+        , DominionSet(Common)
+        , CardType
+            ( Treasure
+            , Victory
+            , Curse
+            )
+        , initialModel
+        )
 
 
 type Msg
@@ -6,11 +18,38 @@ type Msg
 
 
 type alias Model =
-    { test : String
+    { cards : List Card
     }
 
 
 initialModel : Model
 initialModel =
-    { test = ""
+    { cards = []
     }
+
+
+type alias Card =
+    { name : String
+    , set : DominionSet
+    , imgSrc : String
+    , cardType : List CardType
+    }
+
+
+type DominionSet
+    = Common
+    | BaseSet
+    | Intrigue
+    | Seaside
+    | Prosperity
+    | Hinterlands
+    | DarkAges
+    | Adventures
+    | Empires
+    | Nocturne
+
+
+type CardType
+    = Treasure
+    | Victory
+    | Curse
