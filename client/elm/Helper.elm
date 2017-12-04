@@ -5,6 +5,7 @@ import DominionSets.BaseSet exposing (baseSet)
 import DominionSets.BaseSet2 exposing (baseSet2)
 import DominionSets.Intrigue exposing (intrigue)
 import DominionSets.Intrigue2 exposing (intrigue2)
+import DominionSets.Seaside exposing (seaside)
 import Types exposing (Model)
 
 
@@ -16,6 +17,7 @@ getSets model =
             , baseSet2
             , intrigue
             , intrigue2
+            , seaside
             , commonSet
             ]
     }

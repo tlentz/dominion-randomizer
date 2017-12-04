@@ -10,6 +10,7 @@ module Types
             , BaseSet2
             , Intrigue
             , Intrigue2
+            , Seaside
             )
         , CardType
             ( Treasure
@@ -18,6 +19,7 @@ module Types
             , Action
             , Attack
             , Reaction
+            , Duration
             )
         , CardCost
         , initialModel
@@ -89,6 +91,7 @@ type CardType
     | Action
     | Attack
     | Reaction
+    | Duration
 
 
 type alias CardCost =
