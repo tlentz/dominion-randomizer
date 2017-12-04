@@ -447,7 +447,7 @@ shantyTown : Card
 shantyTown =
     { name = "ShantyTown"
     , set = Intrigue
-    , imgSrc = "intrigue_shantyTown"
+    , imgSrc = "intrigue_shantytown"
     , cardType = [ Action ]
     , cost =
         { treasure = 3
