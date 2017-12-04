@@ -17,6 +17,7 @@ module Types
             , Attack
             , Reaction
             )
+        , CardCost
         , initialModel
         )
 
@@ -43,7 +44,16 @@ type alias Card =
     , set : DominionSet
     , imgSrc : String
     , cardType : List CardType
-    , cost : Int
+    , cost : CardCost
+    , isTerminal : Bool
+    , isTrasher : Bool
+    , isPlusBuys : Bool
+    , is2PlusActions : Bool
+    , is2PlusCards : Bool
+    , isGainer : Bool
+    , isDiscarder : Bool
+    , isDrawer : Bool
+    , isArtificialTreasure : Bool
     }
 
 
@@ -75,3 +85,10 @@ type CardType
     | Action
     | Attack
     | Reaction
+
+
+type alias CardCost =
+    { treasure : Int
+    , potion : Int
+    , debt : Int
+    }

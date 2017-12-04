@@ -14,6 +14,7 @@ import Types
             , Reaction
             , Victory
             )
+        , CardCost
         )
 
 
@@ -56,7 +57,20 @@ adventurer =
     , set = BaseSet
     , imgSrc = "baseset_adventurer"
     , cardType = [ Action ]
-    , cost = 6
+    , cost =
+        { treasure = 6
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = True
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -66,7 +80,20 @@ bureaucrat =
     , set = BaseSet
     , imgSrc = "baseset_bureaucrat"
     , cardType = [ Action, Attack ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -76,7 +103,20 @@ cellar =
     , set = BaseSet
     , imgSrc = "baseset_cellar"
     , cardType = [ Action ]
-    , cost = 2
+    , cost =
+        { treasure = 2
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = True
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -86,7 +126,20 @@ chancellor =
     , set = BaseSet
     , imgSrc = "baseset_chancellor"
     , cardType = [ Action ]
-    , cost = 3
+    , cost =
+        { treasure = 3
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = True
     }
 
 
@@ -96,7 +149,20 @@ chapel =
     , set = BaseSet
     , imgSrc = "baseset_chapel"
     , cardType = [ Action ]
-    , cost = 2
+    , cost =
+        { treasure = 2
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -106,7 +172,20 @@ councilRoom =
     , set = BaseSet
     , imgSrc = "baseset_councilroom"
     , cardType = [ Action ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = True
+    , is2PlusActions = False
+    , is2PlusCards = True
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -116,7 +195,20 @@ feast =
     , set = BaseSet
     , imgSrc = "baseset_feast"
     , cardType = [ Action ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -126,7 +218,20 @@ festival =
     , set = BaseSet
     , imgSrc = "baseset_festival"
     , cardType = [ Action ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = True
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = True
     }
 
 
@@ -136,7 +241,20 @@ gardens =
     , set = BaseSet
     , imgSrc = "baseset_gardens"
     , cardType = [ Victory ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -146,7 +264,20 @@ laboratory =
     , set = BaseSet
     , imgSrc = "baseset_laboratory"
     , cardType = [ Action ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = True
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -156,7 +287,20 @@ library =
     , set = BaseSet
     , imgSrc = "baseset_library"
     , cardType = [ Action ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = True
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -166,7 +310,20 @@ market =
     , set = BaseSet
     , imgSrc = "baseset_market"
     , cardType = [ Action ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = True
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = True
     }
 
 
@@ -176,7 +333,20 @@ militia =
     , set = BaseSet
     , imgSrc = "baseset_militia"
     , cardType = [ Action, Attack ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = True
     }
 
 
@@ -186,7 +356,20 @@ mine =
     , set = BaseSet
     , imgSrc = "baseset_mine"
     , cardType = [ Action ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -196,7 +379,20 @@ moat =
     , set = BaseSet
     , imgSrc = "baseset_moat"
     , cardType = [ Action, Reaction ]
-    , cost = 2
+    , cost =
+        { treasure = 2
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = True
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -206,7 +402,20 @@ moneylender =
     , set = BaseSet
     , imgSrc = "baseset_moneylender"
     , cardType = [ Action ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = True
     }
 
 
@@ -216,7 +425,20 @@ remodel =
     , set = BaseSet
     , imgSrc = "baseset_remodel"
     , cardType = [ Action ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -226,7 +448,20 @@ smithy =
     , set = BaseSet
     , imgSrc = "baseset_smithy"
     , cardType = [ Action ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = True
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -236,7 +471,20 @@ spy =
     , set = BaseSet
     , imgSrc = "baseset_spy"
     , cardType = [ Action, Attack ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = True
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -246,7 +494,20 @@ thief =
     , set = BaseSet
     , imgSrc = "baseset_thief"
     , cardType = [ Action, Attack ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = True
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -256,7 +517,20 @@ throneRoom =
     , set = BaseSet
     , imgSrc = "baseset_throneroom"
     , cardType = [ Action ]
-    , cost = 4
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -266,7 +540,20 @@ village =
     , set = BaseSet
     , imgSrc = "baseset_village"
     , cardType = [ Action ]
-    , cost = 3
+    , cost =
+        { treasure = 3
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = True
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -276,7 +563,20 @@ witch =
     , set = BaseSet
     , imgSrc = "baseset_witch"
     , cardType = [ Action, Attack ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = True
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
     }
 
 
@@ -286,7 +586,20 @@ woodcutter =
     , set = BaseSet
     , imgSrc = "baseset_woodcutter"
     , cardType = [ Action ]
-    , cost = 3
+    , cost =
+        { treasure = 3
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = True
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = True
     }
 
 
@@ -296,5 +609,18 @@ workshop =
     , set = BaseSet
     , imgSrc = "baseset_workshop"
     , cardType = [ Action ]
-    , cost = 3
+    , cost =
+        { treasure = 3
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }

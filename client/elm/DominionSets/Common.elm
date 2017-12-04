@@ -38,7 +38,20 @@ copper =
     , set = Common
     , imgSrc = "common_copper"
     , cardType = [ Treasure ]
-    , cost = 0
+    , cost =
+        { treasure = 0
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -48,7 +61,20 @@ silver =
     , set = Common
     , imgSrc = "common_silver"
     , cardType = [ Treasure ]
-    , cost = 3
+    , cost =
+        { treasure = 3
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -58,7 +84,20 @@ gold =
     , set = Common
     , imgSrc = "common_gold"
     , cardType = [ Treasure ]
-    , cost = 6
+    , cost =
+        { treasure = 6
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -68,7 +107,20 @@ estate =
     , set = Common
     , imgSrc = "common_estate"
     , cardType = [ Victory ]
-    , cost = 2
+    , cost =
+        { treasure = 2
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -78,7 +130,20 @@ duchy =
     , set = Common
     , imgSrc = "common_duchy"
     , cardType = [ Victory ]
-    , cost = 5
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -88,7 +153,20 @@ province =
     , set = Common
     , imgSrc = "common_province"
     , cardType = [ Victory ]
-    , cost = 8
+    , cost =
+        { treasure = 8
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
 
 
@@ -98,5 +176,18 @@ curse =
     , set = Common
     , imgSrc = "common_curse"
     , cardType = [ Victory ]
-    , cost = 0
+    , cost =
+        { treasure = 0
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
     }
