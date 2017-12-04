@@ -24,10 +24,12 @@ commonSet =
         [ copper
         , silver
         , gold
+        , platinum
         , estate
         , duchy
         , province
         , curse
+        , colony
         ]
     }
 
@@ -101,6 +103,29 @@ gold =
     }
 
 
+platinum : Card
+platinum =
+    { name = "Platinum"
+    , set = Common
+    , imgSrc = "prosperity_platinum"
+    , cardType = [ Treasure ]
+    , cost =
+        { treasure = 9
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
+    }
+
+
 estate : Card
 estate =
     { name = "Estate"
@@ -155,6 +180,29 @@ province =
     , cardType = [ Victory ]
     , cost =
         { treasure = 8
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
+    }
+
+
+colony : Card
+colony =
+    { name = "Colony"
+    , set = Common
+    , imgSrc = "prosperity_colony"
+    , cardType = [ Victory ]
+    , cost =
+        { treasure = 11
         , potion = 0
         , debt = 0
         }

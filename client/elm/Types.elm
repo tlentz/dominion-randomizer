@@ -8,6 +8,8 @@ module Types
             ( Common
             , BaseSet
             , BaseSet2
+            , Intrigue
+            , Intrigue2
             )
         , CardType
             ( Treasure
@@ -69,6 +71,7 @@ type DominionSet
     | BaseSet
     | BaseSet2
     | Intrigue
+    | Intrigue2
     | Seaside
     | Prosperity
     | Hinterlands
@@ -76,6 +79,7 @@ type DominionSet
     | Adventures
     | Empires
     | Nocturne
+    | Promos
 
 
 type CardType
