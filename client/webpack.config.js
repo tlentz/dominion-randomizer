@@ -9,7 +9,6 @@ const Webpack = require('webpack');
 const WepackMd5Hash = require('webpack-md5-hash');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require ("favicons-webpack-plugin");
 const Autoprefixer = require('autoprefixer');
@@ -99,11 +98,6 @@ module.exports = {
 
         // Remove build directory
         OnlyIn(PRODUCTION, new CleanWebpackPlugin(['dist'])),
-
-        new CopyWebpackPlugin([{
-            from: 'assets/',
-            to: 'assets/'
-        }]),
 
         OnlyIn(PRODUCTION, new WepackMd5Hash()),
 

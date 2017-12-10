@@ -11,6 +11,7 @@ module Types
             , Intrigue
             , Intrigue2
             , Seaside
+            , Alchemy
             )
         , CardType
             ( Treasure
@@ -75,6 +76,7 @@ type DominionSet
     | Intrigue
     | Intrigue2
     | Seaside
+    | Alchemy
     | Prosperity
     | Hinterlands
     | DarkAges

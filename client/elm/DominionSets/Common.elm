@@ -25,6 +25,7 @@ commonSet =
         , silver
         , gold
         , platinum
+        , potion
         , estate
         , duchy
         , province
@@ -111,6 +112,29 @@ platinum =
     , cardType = [ Treasure ]
     , cost =
         { treasure = 9
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
+    }
+
+
+potion : Card
+potion =
+    { name = "Potion"
+    , set = Common
+    , imgSrc = "alchemy_potion"
+    , cardType = [ Treasure ]
+    , cost =
+        { treasure = 4
         , potion = 0
         , debt = 0
         }
