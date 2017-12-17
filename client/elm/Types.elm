@@ -12,6 +12,7 @@ module Types
             , Intrigue2
             , Seaside
             , Alchemy
+            , Prosperity
             )
         , CardType
             ( Treasure
