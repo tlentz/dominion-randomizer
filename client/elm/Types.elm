@@ -13,6 +13,7 @@ module Types
             , Seaside
             , Alchemy
             , Prosperity
+            , Hinterlands
             )
         , CardType
             ( Treasure

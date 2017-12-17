@@ -8,6 +8,7 @@ import DominionSets.Intrigue2 exposing (intrigue2)
 import DominionSets.Seaside exposing (seaside)
 import DominionSets.Alchemy exposing (alchemy)
 import DominionSets.Prosperity exposing (prosperity)
+import DominionSets.Hinterlands exposing (hinterlands)
 import Types exposing (Model)
 
 
@@ -22,6 +23,7 @@ getSets model =
             , seaside
             , alchemy
             , prosperity
+            , hinterlands
             , commonSet
             ]
     }

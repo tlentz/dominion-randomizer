@@ -1,65 +1,90 @@
-module DominionSets.Prosperity
+module DominionSets.Hinterlands
     exposing
-        ( prosperity
+        ( hinterlands
         )
 
 import Types
     exposing
         ( Card
         , DominionSetModel
-        , DominionSet(Prosperity)
+        , DominionSet(Hinterlands)
         , CardType
             ( Action
             , Attack
             , Reaction
             , Treasure
+            , Victory
             )
         , CardCost
         )
 
 
-prosperity : DominionSetModel
-prosperity =
-    { name = "Prosperity"
-    , set = Prosperity
+hinterlands : DominionSetModel
+hinterlands =
+    { name = "Hinterlands"
+    , set = Hinterlands
     , cards =
-        [ bank
-        , bishop
-        , city
-        , contraband
-        , countingHouse
-        , expand
-        , forge
-        , goons
-        , grandMarket
-        , hoard
-        , kingsCourt
-        , loan
-        , mint
-        , monument
-        , mountebank
-        , peddler
-        , quarry
-        , rabble
-        , royalSeal
-        , talisman
-        , tradeRoute
-        , vault
-        , venture
-        , watchtower
-        , workersVillage
+        [ borderVillage
+        , cache
+        , cartographer
+        , crossroads
+        , develop
+        , duchess
+        , embassy
+        , farmland
+        , foolsGold
+        , haggler
+        , highway
+        , illGottenGains
+        , inn
+        , jackOfAllTrades
+        , mandarin
+        , nobleBrigand
+        , margrave
+        , oasis
+        , nomadCamp
+        , oracle
+        , scheme
+        , silkRoad
+        , spiceMerchant
+        , stables
+        , trader
+        , tunnel
         ]
     }
 
 
-bank : Card
-bank =
-    { name = "Bank"
-    , set = Prosperity
-    , imgSrc = "prosperity_bank"
+borderVillage : Card
+borderVillage =
+    { name = "Border Village"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_bordervillage"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 6
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = True
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
+    }
+
+
+cache : Card
+cache =
+    { name = "Cache"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_cache"
     , cardType = [ Treasure ]
     , cost =
-        { treasure = 7
+        { treasure = 5
         , potion = 0
         , debt = 0
         }
@@ -68,41 +93,18 @@ bank =
     , isPlusBuys = False
     , is2PlusActions = False
     , is2PlusCards = False
-    , isGainer = False
+    , isGainer = True
     , isDiscarder = False
     , isDrawer = False
     , isArtificialTreasure = False
     }
 
 
-bishop : Card
-bishop =
-    { name = "Bishop"
-    , set = Prosperity
-    , imgSrc = "prosperity_bishop"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 4
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = True
-    , isTrasher = True
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = False
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = True
-    }
-
-
-city : Card
-city =
-    { name = "City"
-    , set = Prosperity
-    , imgSrc = "prosperity_city"
+cartographer : Card
+cartographer =
+    { name = "Cartographer"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_cartographer"
     , cardType = [ Action ]
     , cost =
         { treasure = 5
@@ -111,22 +113,275 @@ city =
         }
     , isTerminal = False
     , isTrasher = False
-    , isPlusBuys = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = True
+    , isDrawer = True
+    , isArtificialTreasure = False
+    }
+
+
+crossroads : Card
+crossroads =
+    { name = "Crossroads"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_crossroads"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 2
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = True
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
+    }
+
+
+develop : Card
+develop =
+    { name = "Develop"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_develop"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 3
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
+    }
+
+
+duchess : Card
+duchess =
+    { name = "Duchess"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_duchess"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 2
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = True
+    , isDrawer = False
+    , isArtificialTreasure = True
+    }
+
+
+embassy : Card
+embassy =
+    { name = "Embassy"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_embassy"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = True
+    , isGainer = True
+    , isDiscarder = True
+    , isDrawer = True
+    , isArtificialTreasure = False
+    }
+
+
+farmland : Card
+farmland =
+    { name = "Farmland"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_farmland"
+    , cardType = [ Victory ]
+    , cost =
+        { treasure = 6
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
+    }
+
+
+foolsGold : Card
+foolsGold =
+    { name = "Fool's Gold"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_foolsgold"
+    , cardType = [ Reaction, Treasure ]
+    , cost =
+        { treasure = 2
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
+    }
+
+
+haggler : Card
+haggler =
+    { name = "Haggler"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_haggler"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = True
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = True
+    }
+
+
+highway : Card
+highway =
+    { name = "Highway"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_highway"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = False
+    }
+
+
+illGottenGains : Card
+illGottenGains =
+    { name = "Ill-Gotten Gains"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_illgottengains"
+    , cardType = [ Treasure ]
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = False
+    , isDrawer = False
+    , isArtificialTreasure = False
+    }
+
+
+inn : Card
+inn =
+    { name = "Inn"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_inn"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 5
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = False
+    , isPlusBuys = False
     , is2PlusActions = True
     , is2PlusCards = True
     , isGainer = False
-    , isDiscarder = False
+    , isDiscarder = True
     , isDrawer = True
-    , isArtificialTreasure = True
+    , isArtificialTreasure = False
     }
 
 
-contraband : Card
-contraband =
-    { name = "Contraband"
-    , set = Prosperity
-    , imgSrc = "prosperity_contraband"
-    , cardType = [ Treasure ]
+jackOfAllTrades : Card
+jackOfAllTrades =
+    { name = "Jack of All Trades"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_jackofalltrades"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = True
+    , isPlusBuys = False
+    , is2PlusActions = False
+    , is2PlusCards = False
+    , isGainer = True
+    , isDiscarder = True
+    , isDrawer = True
+    , isArtificialTreasure = False
+    }
+
+
+mandarin : Card
+mandarin =
+    { name = "Mandarin"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_mandarin"
+    , cardType = [ Action ]
     , cost =
         { treasure = 5
         , potion = 0
@@ -134,228 +389,90 @@ contraband =
         }
     , isTerminal = False
     , isTrasher = False
-    , isPlusBuys = True
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = False
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = False
-    }
-
-
-countingHouse : Card
-countingHouse =
-    { name = "Counting House"
-    , set = Prosperity
-    , imgSrc = "prosperity_countinghouse"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 5
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = True
-    , isTrasher = False
     , isPlusBuys = False
     , is2PlusActions = False
     , is2PlusCards = False
     , isGainer = False
     , isDiscarder = False
     , isDrawer = False
-    , isArtificialTreasure = False
+    , isArtificialTreasure = True
     }
 
 
-expand : Card
-expand =
-    { name = "Expand"
-    , set = Prosperity
-    , imgSrc = "prosperity_expand"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 7
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = True
-    , isTrasher = True
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = True
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = False
-    }
-
-
-forge : Card
-forge =
-    { name = "Forge"
-    , set = Prosperity
-    , imgSrc = "prosperity_forge"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 7
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = True
-    , isTrasher = True
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = True
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = False
-    }
-
-
-goons : Card
-goons =
-    { name = "Goons"
-    , set = Prosperity
-    , imgSrc = "prosperity_goons"
+nobleBrigand : Card
+nobleBrigand =
+    { name = "Noble Brigand"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_noblebrigand"
     , cardType = [ Action, Attack ]
     , cost =
-        { treasure = 6
+        { treasure = 4
         , potion = 0
         , debt = 0
         }
     , isTerminal = True
-    , isTrasher = False
-    , isPlusBuys = True
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = False
-    , isDiscarder = True
-    , isDrawer = False
-    , isArtificialTreasure = True
-    }
-
-
-grandMarket : Card
-grandMarket =
-    { name = "Grand Market"
-    , set = Prosperity
-    , imgSrc = "prosperity_grandmarket"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 6
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = False
-    , isPlusBuys = True
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = False
-    , isDiscarder = False
-    , isDrawer = True
-    , isArtificialTreasure = True
-    }
-
-
-hoard : Card
-hoard =
-    { name = "Hoard"
-    , set = Prosperity
-    , imgSrc = "prosperity_hoard"
-    , cardType = [ Treasure ]
-    , cost =
-        { treasure = 6
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = False
+    , isTrasher = True
     , isPlusBuys = False
     , is2PlusActions = False
     , is2PlusCards = False
     , isGainer = True
     , isDiscarder = False
     , isDrawer = False
-    , isArtificialTreasure = False
+    , isArtificialTreasure = True
     }
 
 
-kingsCourt : Card
-kingsCourt =
-    { name = "King's Court"
-    , set = Prosperity
-    , imgSrc = "prosperity_kingscourt"
+margrave : Card
+margrave =
+    { name = "Margrave"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_margrave"
     , cardType = [ Action ]
     , cost =
-        { treasure = 7
+        { treasure = 5
         , potion = 0
         , debt = 0
         }
     , isTerminal = True
     , isTrasher = False
-    , isPlusBuys = False
+    , isPlusBuys = True
     , is2PlusActions = False
-    , is2PlusCards = False
+    , is2PlusCards = True
     , isGainer = False
-    , isDiscarder = False
-    , isDrawer = False
+    , isDiscarder = True
+    , isDrawer = True
     , isArtificialTreasure = False
     }
 
 
-loan : Card
-loan =
-    { name = "Loan"
-    , set = Prosperity
-    , imgSrc = "prosperity_loan"
-    , cardType = [ Treasure ]
+oasis : Card
+oasis =
+    { name = "Oasis"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_oasis"
+    , cardType = [ Action ]
     , cost =
         { treasure = 3
         , potion = 0
         , debt = 0
         }
     , isTerminal = False
-    , isTrasher = True
+    , isTrasher = False
     , isPlusBuys = False
     , is2PlusActions = False
     , is2PlusCards = False
     , isGainer = False
     , isDiscarder = True
-    , isDrawer = False
-    , isArtificialTreasure = False
+    , isDrawer = True
+    , isArtificialTreasure = True
     }
 
 
-mint : Card
-mint =
-    { name = "Mint"
-    , set = Prosperity
-    , imgSrc = "prosperity_mint"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 5
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = True
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = True
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = False
-    }
-
-
-monument : Card
-monument =
-    { name = "Monument"
-    , set = Prosperity
-    , imgSrc = "prosperity_monument"
+nomadCamp : Card
+nomadCamp =
+    { name = "Nomad Camp"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_nomadcamp"
     , cardType = [ Action ]
     , cost =
         { treasure = 4
@@ -364,7 +481,7 @@ monument =
         }
     , isTerminal = True
     , isTrasher = False
-    , isPlusBuys = False
+    , isPlusBuys = True
     , is2PlusActions = False
     , is2PlusCards = False
     , isGainer = False
@@ -374,14 +491,14 @@ monument =
     }
 
 
-mountebank : Card
-mountebank =
-    { name = "Mountebank"
-    , set = Prosperity
-    , imgSrc = "prosperity_mountebank"
+oracle : Card
+oracle =
+    { name = "Oracle"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_oracle"
     , cardType = [ Action, Attack ]
     , cost =
-        { treasure = 5
+        { treasure = 3
         , potion = 0
         , debt = 0
         }
@@ -389,22 +506,22 @@ mountebank =
     , isTrasher = False
     , isPlusBuys = False
     , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = True
+    , is2PlusCards = True
+    , isGainer = False
     , isDiscarder = True
     , isDrawer = False
-    , isArtificialTreasure = True
+    , isArtificialTreasure = False
     }
 
 
-peddler : Card
-peddler =
-    { name = "Peddler"
-    , set = Prosperity
-    , imgSrc = "prosperity_peddler"
+scheme : Card
+scheme =
+    { name = "Scheme"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_scheme"
     , cardType = [ Action ]
     , cost =
-        { treasure = 8
+        { treasure = 3
         , potion = 0
         , debt = 0
         }
@@ -416,16 +533,16 @@ peddler =
     , isGainer = False
     , isDiscarder = False
     , isDrawer = True
-    , isArtificialTreasure = True
+    , isArtificialTreasure = False
     }
 
 
-quarry : Card
-quarry =
-    { name = "Quarry"
-    , set = Prosperity
-    , imgSrc = "prosperity_quarry"
-    , cardType = [ Treasure ]
+silkRoad : Card
+silkRoad =
+    { name = "Silk Road"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_silkroad"
+    , cardType = [ Victory ]
     , cost =
         { treasure = 4
         , potion = 0
@@ -443,12 +560,35 @@ quarry =
     }
 
 
-rabble : Card
-rabble =
-    { name = "Rabble"
-    , set = Prosperity
-    , imgSrc = "prosperity_rabble"
-    , cardType = [ Action, Attack ]
+spiceMerchant : Card
+spiceMerchant =
+    { name = "Spice Merchant"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_spicemerchant"
+    , cardType = [ Action ]
+    , cost =
+        { treasure = 4
+        , potion = 0
+        , debt = 0
+        }
+    , isTerminal = False
+    , isTrasher = True
+    , isPlusBuys = True
+    , is2PlusActions = False
+    , is2PlusCards = True
+    , isGainer = False
+    , isDiscarder = False
+    , isDrawer = True
+    , isArtificialTreasure = True
+    }
+
+
+stables : Card
+stables =
+    { name = "Stables"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_stables"
+    , cardType = [ Action ]
     , cost =
         { treasure = 5
         , potion = 0
@@ -466,129 +606,14 @@ rabble =
     }
 
 
-royalSeal : Card
-royalSeal =
-    { name = "Royal Seal"
-    , set = Prosperity
-    , imgSrc = "prosperity_royalseal"
-    , cardType = [ Treasure ]
-    , cost =
-        { treasure = 5
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = False
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = False
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = False
-    }
-
-
-talisman : Card
-talisman =
-    { name = "Talisman"
-    , set = Prosperity
-    , imgSrc = "prosperity_talisman"
-    , cardType = [ Treasure ]
-    , cost =
-        { treasure = 4
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = False
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = True
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = False
-    }
-
-
-tradeRoute : Card
-tradeRoute =
-    { name = "Trade Route"
-    , set = Prosperity
-    , imgSrc = "prosperity_traderoute"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 3
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = True
-    , isPlusBuys = True
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = False
-    , isDiscarder = False
-    , isDrawer = False
-    , isArtificialTreasure = True
-    }
-
-
-vault : Card
-vault =
-    { name = "Vault"
-    , set = Prosperity
-    , imgSrc = "prosperity_vault"
-    , cardType = [ Action ]
-    , cost =
-        { treasure = 5
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = False
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = True
-    , isGainer = False
-    , isDiscarder = True
-    , isDrawer = True
-    , isArtificialTreasure = True
-    }
-
-
-venture : Card
-venture =
-    { name = "Venture"
-    , set = Prosperity
-    , imgSrc = "prosperity_venture"
-    , cardType = [ Treasure ]
-    , cost =
-        { treasure = 5
-        , potion = 0
-        , debt = 0
-        }
-    , isTerminal = False
-    , isTrasher = False
-    , isPlusBuys = False
-    , is2PlusActions = False
-    , is2PlusCards = False
-    , isGainer = False
-    , isDiscarder = True
-    , isDrawer = False
-    , isArtificialTreasure = False
-    }
-
-
-watchtower : Card
-watchtower =
-    { name = "Watchtower"
-    , set = Prosperity
-    , imgSrc = "prosperity_watchtower"
+trader : Card
+trader =
+    { name = "Trader"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_trader"
     , cardType = [ Action, Reaction ]
     , cost =
-        { treasure = 3
+        { treasure = 4
         , potion = 0
         , debt = 0
         }
@@ -597,31 +622,31 @@ watchtower =
     , isPlusBuys = False
     , is2PlusActions = False
     , is2PlusCards = False
-    , isGainer = False
+    , isGainer = True
     , isDiscarder = False
-    , isDrawer = True
+    , isDrawer = False
     , isArtificialTreasure = False
     }
 
 
-workersVillage : Card
-workersVillage =
-    { name = "Worker's Village"
-    , set = Prosperity
-    , imgSrc = "prosperity_workersvillage"
-    , cardType = [ Action ]
+tunnel : Card
+tunnel =
+    { name = "Tunnel"
+    , set = Hinterlands
+    , imgSrc = "hinterlands_tunnel"
+    , cardType = [ Victory, Reaction ]
     , cost =
-        { treasure = 4
+        { treasure = 3
         , potion = 0
         , debt = 0
         }
     , isTerminal = False
     , isTrasher = False
-    , isPlusBuys = True
-    , is2PlusActions = True
+    , isPlusBuys = False
+    , is2PlusActions = False
     , is2PlusCards = False
-    , isGainer = False
+    , isGainer = True
     , isDiscarder = False
-    , isDrawer = True
+    , isDrawer = False
     , isArtificialTreasure = False
     }
