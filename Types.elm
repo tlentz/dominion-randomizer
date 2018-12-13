@@ -38,7 +38,7 @@ type CardType
     | Treasure
     | Victory
     | Reserve
-    | Traveller
+    | Traveler
 
 
 type alias Card =
