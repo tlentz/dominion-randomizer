@@ -1,0 +1,17 @@
+type DominionSet
+    = Adventures
+    | Alchemy
+    | BaseSet2
+    | BaseSet
+    | Cornucopia
+    | DarkAges
+    | Empires
+    | Guilds
+    | Hinterlands
+    | Intrigue2
+    | Intrigue
+    | Nocturne
+    | Promos
+    | Prosperity
+    | Renaissance
+    | Seaside

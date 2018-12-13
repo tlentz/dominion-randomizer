@@ -1,1 +1,0 @@
-const pathToCards = require.context('../assets/dominion/cards', true);
